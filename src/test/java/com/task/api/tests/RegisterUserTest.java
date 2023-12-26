@@ -1,11 +1,16 @@
 package com.task.api.tests;
 
 import com.task.common.TestData;
+import com.task.listeners.LoggingRule;
 import org.apache.http.HttpStatus;
+import org.junit.Rule;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class RegisterUserTest extends BaseApiTest {
+
+    @Rule
+    public LoggingRule loggingRule = new LoggingRule();
 
     @Test
     @DisplayName("create user_1")

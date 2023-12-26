@@ -3,13 +3,17 @@ package com.task.api.tests;
 import com.task.api.dto.LoginDTO;
 import com.task.api.dto.UserMasterDTO;
 import com.task.common.TestData;
+import com.task.listeners.LoggingRule;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.Rule;
 
 public class AddToCartTest extends BaseApiTest {
 
+    @Rule
+    public LoggingRule loggingRule = new LoggingRule();
     @Test
     @DisplayName("add to cart_1")
     public void testAddToCart() {

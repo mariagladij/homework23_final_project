@@ -2,9 +2,11 @@ package com.task.ui.tests;
 
 import com.task.api.dto.*;
 import com.task.common.TestData;
+import com.task.listeners.LoggingRule;
 import com.task.ui.pages.*;
 import io.restassured.http.Header;
 import org.apache.http.HttpStatus;
+import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,6 +15,8 @@ import java.util.List;
 
 public class OrderBookTest extends BaseUiTest {
 
+    @Rule
+    public LoggingRule loggingRule = new LoggingRule();
     @Test
     @DisplayName("E2E UI test")
     public void testOrderBook() {

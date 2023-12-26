@@ -9,5 +9,4 @@ public class BaseApiTest {
     protected OrderService orderService = new OrderService();
     protected UserService userService = new UserService();
 
-    //it can be more useful methods here
 }

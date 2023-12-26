@@ -6,13 +6,18 @@ import com.task.api.dto.OrdersDTO;
 import com.task.api.dto.UserMasterDTO;
 import com.task.api.utils.BuilderUtils;
 import com.task.common.TestData;
+import com.task.listeners.LoggingRule;
 import io.restassured.http.Header;
 import org.apache.http.HttpStatus;
+import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CheckoutTest extends BaseApiTest {
+
+    @Rule
+    public LoggingRule loggingRule = new LoggingRule();
 
     @Test
     @DisplayName("checkout_1")
